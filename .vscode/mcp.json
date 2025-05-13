@@ -1,0 +1,18 @@
+{
+    "servers": {
+        "github-official": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "-e",
+                "GITHUB_PERSONAL_ACCESS_TOKEN",
+                "-e",
+                "GITHUB_DYNAMIC_TOOLSETS=1",
+                "mcp/github-mcp-server"
+            ],
+            "envFile": "${workspaceFolder}/.env"
+        }
+    }
+}
